@@ -13,5 +13,10 @@ navigation({
 });
 ```
 
+## Purpose to develop.
+1. We will intuitively understand the main purpose of the content before reading the body of the content.
+2. Provides rules for authors to organize their content systematically.
+
+
 ## Note for contribute.
 Anyone can participate in this project without regulation. **We hope you will contribute this project for simplicity and rapid development rather than fragmentation of the project.** It helps us focus our opinions effectively and systematically. **You can do anything on this project without restriction!**
