@@ -12,3 +12,6 @@ navigation({
     descendent: ['h2', 'h3', 'h4', 'h5', 'h6'] // Specifies the array of element node names to be imported as additional child elements
 });
 ```
+
+## Note for contribute.
+Anyone can participate in this project without regulation. **We hope you will contribute this project for simplicity and rapid development rather than fragmentation of the project.** It helps us focus our opinions effectively and systematically. **You can do anything on this project without restriction!**
