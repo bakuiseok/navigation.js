@@ -1,8 +1,10 @@
 # suk9206/navigation.js
 **"suk9206/navigation.js"** is copies the skip break that matches the form set in **"suk9206/navigation.js"** from the specified element to the desired element.
 
-## Usage
+## Example
+https://suk9206.github.io/navigation.js/
 
+## Usage
 ```
 navigation({
     from: document.getElementById('main'), // Elements that you want to navigation.
