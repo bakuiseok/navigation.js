@@ -65,9 +65,3 @@ function navigation(option) {
         }
     }
 }
-
-/* navigation({
-    from: document.getElementById('main'),
-    into: document.getElementById('nav'),
-    descendent: ['h2', 'h3', 'h4', 'h5', 'h6']
-}); */
