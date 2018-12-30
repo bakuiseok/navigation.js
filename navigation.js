@@ -1,15 +1,28 @@
 function navigation(option) {
     for (let ol of option.from.querySelectorAll('ol')) {
+
+        /* ############ */
         let cResult = [];
-        for (let c of ol.children) {
-            if (!c.id
-                && c.nodeName == 'LI'
-                && c.children[0].nodeName == 'H2'
-                && c.children[1].nodeName == 'HR') {
-                c.setAttribute('id', option.from.nodeName + c.nodeName + Math.random());
-                cResult.push(c);
+        for (let c of ol.children) { // target LI
+            if (!c.id && c.nodeName == 'LI') {
+                let whe = [];
+                console.log(c);
+                for (let d of c.children) {
+                    console.log(d);
+                    for (let i = 0; i < option.list.length; i++) {
+                        if (d.nodeName.toLowerCase() == option.list[i]) {
+                            whe.push(d.nodeName.toLowerCase());
+                            if (JSON.stringify(option.list) == JSON.stringify(whe)) {
+                                c.setAttribute('id', option.from.nodeName + c.nodeName + Math.random());
+                                cResult.push(c);
+                            }
+                        }
+                    }
+                }
             }
         }
+        /* ############ */
+
 
         if (cResult.length) {
             ol.setAttribute('id', option.from.nodeName + ol.nodeName + Math.random());

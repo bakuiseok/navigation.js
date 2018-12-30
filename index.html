@@ -2,11 +2,101 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="./navigation.js"></script>
+
     <title>navigation.js</title>
 </head>
 
-<body>
-    <h1>navigation.js</h1>
+<body onload="mainNav();">
+    <header>
+        <h1>navigation.js</h1>
+        <p><em>"suk9206/navigation.js"</em> is copies the skip break that matches the form set in <em>"suk9206/navigation.js"</em>
+            from
+            the specified element to the desired element.</p>
+    </header>
+
+    <nav id="nav" style="border: 1px solid #000">
+        <script>
+            function mainNav() {
+                navigation({
+                    from: document.getElementById('main'),
+                    into: document.getElementById('nav'),
+                    list: ['h2', 'hr'],
+                    descendent: ['h2', 'h3', 'h4', 'h5', 'h6']
+                });
+            }
+        </script>
+    </nav>
+
+    <main id="main">
+        <div style="border-left: 5px solid #000; padding-left: 1em;">
+            <p>The navigation.js uses <b>OL</b> list tags. Because it is to keep the order of LIST HEADING strictly.</p>
+        </div>
+        <ol>
+            <li>
+                <h2>LIST HEADING 1</h2>
+                <hr>
+                <p>_</p>
+                <ol>
+                    <li>
+                        <h2>LIST HEADING 1-1</h2>
+                        <hr>
+                        <p>_</p>
+                    </li>
+                    <li>
+                        <h2>LIST HEADING 1-2</h2>
+                        <hr>
+                        <p>_</p>
+                        <ol>
+                            <li>
+                                <h2>LIST HEADING 1-2-1</h2>
+                                <hr>
+                                <h2>Heading H2 is descendent of LIST HEADING 1-2-1</h2>
+                                <h3>Heading H3 is descendent of LIST HEADING 1-2-1</h3>
+                                <h4>Heading H4 is descendent of LIST HEADING 1-2-1</h4>
+                                <h5>Heading H5 is descendent of LIST HEADING 1-2-1</h5>
+                                <h6>Heading H6 is descendent of LIST HEADING 1-2-1</h6>
+                                <hr>
+                                <p>It descendents of LIST HEADING.</p>
+                                <p>The navigation.js navigates and copies the incidental descendent of LIST HEADING.
+                                    As it default set is <b>H2, H3, H4, H5, H6.</b></p>
+                                <p><strong>! You can add or modify element to this collection. Please refer this
+                                        project github
+                                        'README.md'.</strong></p>
+                            </li>
+                            <li>
+                                <h2>LIST HEADING 1-2-2</h2>
+                                <hr>
+                                <p>_</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h2>LIST HEADING 2</h2>
+                <hr>
+                <p>_</p>
+                <ol>
+                    <li>
+                        <h2>LIST HEADING 2-1 *Do not navigation.</h2>
+                        <p>Because this list does not enough a condition as navigation condition.</p>
+                        <p>The navigation.js condition default set element relationship is <b>OL &#8715; LI &#8715; H2
+                                -
+                                HR.</b></p>
+                        <p><strong>! You can modify set of navigation condition. Please refer this project github
+                                'README.md'. </strong></p>
+                        <p>> Omit HR tag.</p>
+                    </li>
+                    <li>
+                        <h2>LIST HEADING 2-2</h2>
+                        <hr>
+                        <p>_</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </main>
 </body>
 
 </html>
