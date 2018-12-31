@@ -34,14 +34,19 @@ function navigation(option) {
             }
             const intoOl = intoOlParent.appendChild(document.createElement('OL'))
             intoOl.setAttribute('id', option.into.nodeName + ol.id);
+            intoOl.setAttribute('class', option.class.ol);
             /* #### #### */
             for (let li of cResult) {
                 const intoLi = intoOl.appendChild(document.createElement('LI'))
                 intoLi.setAttribute('id', option.into.nodeName + li.id);
+                intoLi.setAttribute('class', option.class.li);
 
-                const h1 = intoLi.appendChild(document.createElement('H1'));
-                const a = h1.appendChild(document.createElement('A'));
+                let div = intoLi.appendChild(document.createElement('div'));
+                div.setAttribute('class', option.class.div_listHeading);
+
+                let a = div.appendChild(document.createElement('A'));
                 a.setAttribute('href', '#' + li.id);
+                a.setAttribute('class', option.class.a_listHeading);
                 a.innerText = li.children[0].textContent;
                 /* #### #### #### */
                 if (option.hasDescendent) {
@@ -56,8 +61,11 @@ function navigation(option) {
                                     e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
 
                                     const span = intoLi.appendChild(document.createElement('SPAN'));
+                                    span.setAttribute('class', option.class.span_descendent);
+
                                     const a = span.appendChild(document.createElement('A'))
                                     a.setAttribute('href', '#' + e.id);
+                                    a.setAttribute('class', option.class.a_descendent);
                                     a.innerText = e.textContent;
                                 }
                             }

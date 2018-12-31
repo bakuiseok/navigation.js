@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <style>
-        span {
+        .navigation-li {
+            margin: 1rem 0rem 1rem 0rem;
+        }
+
+        .navigation-a_listHeading {
+            font-weight: bolder;
+        }
+
+        .navigation-span_descendent {
             margin: 0.2rem;
         }
 
-        span::before {
+        .navigation-span_descendent::before {
             content: '# ';
             font-weight: bolder;
         }
@@ -21,18 +29,27 @@
 
 <body onload="mainNav();">
     <header>
-        <h1>navigation.js</h1>
-        <p><em>"suk9206/navigation.js"</em> is copies the skip break that matches the form set in <em>"suk9206/navigation.js"</em>
+        <h1 style="color:darkolivegreen">navigation.js</h1>
+        <p style="color:darkolivegreen"><em>"suk9206/navigation.js"</em> is copies the skip break that matches the form
+            set in <em>"suk9206/navigation.js"</em>
             from
             the specified element to the desired element.</p>
     </header>
 
-    <nav id="nav" style="border: 0.1rem solid #000">
+    <nav id="nav" style="border: 0.1rem solid blue">
         <script>
             function mainNav() {
                 navigation({
                     from: document.getElementById('main'),
                     into: document.getElementById('nav'),
+                    class: {
+                        ol: 'navigation-ol',
+                        li: 'navigation-li',
+                        div_listHeading: 'navigation-div_listHeading',
+                        a_listHeading: 'navigation-a_listHeading',
+                        span_descendent: 'navigation-span_descendent',
+                        a_descendent: 'navigation-a_descendent'
+                    },
                     list: ['h2', 'hr'],
                     descendent: ['h2', 'h3', 'h4', 'h5', 'h6'],
                     hasDescendent: true
@@ -61,7 +78,7 @@
                         <hr>
                         <p>_</p>
                         <ol>
-                            <li>
+                            <li style="border:1px solid blue">
                                 <h2>LIST HEADING 1-2-1</h2>
                                 <hr>
                                 <h2>Heading H2 is descendent of LIST HEADING 1-2-1</h2>
@@ -91,7 +108,7 @@
                 <hr>
                 <p>_</p>
                 <ol>
-                    <li>
+                    <li style="background:orange">
                         <h2>LIST HEADING 2-1 *Do not navigation.</h2>
                         <p>Because this list does not enough a condition as navigation condition.</p>
                         <p>The navigation.js condition default set element relationship is <b>OL &#8715; LI &#8715; H2
