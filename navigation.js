@@ -49,26 +49,28 @@ function navigation(option) {
                 a.setAttribute('href', '#' + li.id);
                 a.innerText = li.children[0].textContent;
 
-                for (let s of option.descendent) {
-                    let i = 0;
-                    for (let e of li.children) {
-                        if (i < option.list.length
-                            && e.nodeName == option.list[i].toUpperCase()) {
-                            continue;
-                        } else {
-                            if (e.nodeName == s.toUpperCase()) {
-                                e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
+                if (option.hasDescendent) {
+                    for (let s of option.descendent) {
+                        let i = 0;
+                        for (let e of li.children) {
+                            if (i < option.list.length
+                                && e.nodeName == option.list[i].toUpperCase()) {
+                                continue;
+                            } else {
+                                if (e.nodeName == s.toUpperCase()) {
+                                    e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
 
-                                const span = intoLi.appendChild(document.createElement('SPAN'));
-                                span.style.margin = '0.2rem';
-                                const a = span.appendChild(document.createElement('A'))
-                                a.setAttribute('href', '#' + e.id);
-                                a.innerText = '#' + e.textContent;
+                                    const span = intoLi.appendChild(document.createElement('SPAN'));
+                                    const a = span.appendChild(document.createElement('A'))
+                                    a.setAttribute('href', '#' + e.id);
+                                    a.innerText = e.textContent;
+                                }
                             }
+                            i++;
                         }
-                        i++;
                     }
                 }
+
             }
         }
     }

@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    
+
+    <style>
+        span {
+            margin: 0.2rem;
+        }
+
+        span::before {
+            content: '# ';
+            font-weight: bolder;
+        }
+    </style>
     <script src="./navigation.js"></script>
 
     <title>navigation.js</title>
@@ -17,14 +27,15 @@
             the specified element to the desired element.</p>
     </header>
 
-    <nav id="nav" style="border: 1px solid #000">
+    <nav id="nav" style="border: 0.1rem solid #000">
         <script>
             function mainNav() {
                 navigation({
                     from: document.getElementById('main'),
                     into: document.getElementById('nav'),
                     list: ['h2', 'hr'],
-                    descendent: ['h2', 'h3', 'h4', 'h5', 'h6']
+                    descendent: ['h2', 'h3', 'h4', 'h5', 'h6'],
+                    hasDescendent: true
                 });
             }
         </script>
