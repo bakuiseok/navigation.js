@@ -1,14 +1,11 @@
 function navigation(option) {
     for (let ol of option.from.querySelectorAll('ol')) {
-
-        /* ############ */
+        /* #### */
         let cResult = [];
-        for (let c of ol.children) { // target LI
+        for (let c of ol.children) {
             if (!c.id && c.nodeName == 'LI') {
                 let whe = [];
-                //console.log(c);
                 for (let d of c.children) {
-                    //  console.log(d);
                     for (let i = 0; i < option.list.length; i++) {
                         if (d.nodeName.toLowerCase() == option.list[i]) {
                             whe.push(d.nodeName.toLowerCase());
@@ -21,9 +18,7 @@ function navigation(option) {
                 }
             }
         }
-        /* ############ */
-
-
+        /* #### */
         if (cResult.length) {
             ol.setAttribute('id', option.from.nodeName + ol.nodeName + Math.random());
 
@@ -39,7 +34,7 @@ function navigation(option) {
             }
             const intoOl = intoOlParent.appendChild(document.createElement('OL'))
             intoOl.setAttribute('id', option.into.nodeName + ol.id);
-
+            /* #### #### */
             for (let li of cResult) {
                 const intoLi = intoOl.appendChild(document.createElement('LI'))
                 intoLi.setAttribute('id', option.into.nodeName + li.id);
@@ -48,7 +43,7 @@ function navigation(option) {
                 const a = h1.appendChild(document.createElement('A'));
                 a.setAttribute('href', '#' + li.id);
                 a.innerText = li.children[0].textContent;
-
+                /* #### #### #### */
                 if (option.hasDescendent) {
                     for (let s of option.descendent) {
                         let i = 0;
@@ -70,8 +65,10 @@ function navigation(option) {
                         }
                     }
                 }
-
+                /* #### #### #### */
             }
+            /* #### #### */
         }
+        /* #### */
     }
 }
