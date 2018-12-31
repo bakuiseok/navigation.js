@@ -2,16 +2,16 @@ function navigation(option) {
     for (let ol of option.from.querySelectorAll('ol')) {
         /* #### */
         let cResult = [];
-        for (let c of ol.children) {
-            if (!c.id && c.nodeName == 'LI') {
-                let whe = [];
-                for (let d of c.children) {
+        for (let li of ol.children) {
+            if (!li.id && li.nodeName == 'LI') {
+                let matchElement = [];
+                for (let e of li.children) {
                     for (let i = 0; i < option.list.length; i++) {
-                        if (d.nodeName.toLowerCase() == option.list[i]) {
-                            whe.push(d.nodeName.toLowerCase());
-                            if (JSON.stringify(option.list) == JSON.stringify(whe)) {
-                                c.setAttribute('id', option.from.nodeName + c.nodeName + Math.random());
-                                cResult.push(c);
+                        if (e.nodeName.toLowerCase() == option.list[i]) {
+                            matchElement.push(e.nodeName.toLowerCase());
+                            if (JSON.stringify(option.list) == JSON.stringify(matchElement)) {
+                                li.setAttribute('id', option.from.nodeName + li.nodeName + Math.random());
+                                cResult.push(li);
                             }
                         }
                     }
@@ -45,14 +45,14 @@ function navigation(option) {
                 a.innerText = li.children[0].textContent;
                 /* #### #### #### */
                 if (option.hasDescendent) {
-                    for (let s of option.descendent) {
+                    for (let d of option.descendent) {
                         let i = 0;
                         for (let e of li.children) {
                             if (i < option.list.length
                                 && e.nodeName == option.list[i].toUpperCase()) {
                                 continue;
                             } else {
-                                if (e.nodeName == s.toUpperCase()) {
+                                if (e.nodeName == d.toUpperCase()) {
                                     e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
 
                                     const span = intoLi.appendChild(document.createElement('SPAN'));
