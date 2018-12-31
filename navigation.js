@@ -57,7 +57,6 @@ function navigation(option) {
                             a_.setAttribute('href', '#' + e.id);
                             const btn = a_.appendChild(document.createElement('BUTTON'))
                             btn.setAttribute('type', 'button');
-                            btn.style.whiteSpace = 'normal'
                             btn.innerText = '#' + e.textContent;
                         }
                     }
