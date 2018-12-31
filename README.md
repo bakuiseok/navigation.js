@@ -13,6 +13,14 @@ https://suk9206.github.io/navigation.js/
 navigation({
     from: document.getElementById('main'), // Elements that you want to navigation.
     into: document.getElementById('nav'), // The location of the element from which you want to import the navigation data.
+    class: {
+        ol: 'navigation-ol',
+        li: 'navigation-li',
+        div_listHeading: 'navigation-div_listHeading',
+        a_listHeading: 'navigation-a_listHeading',
+        span_descendent: 'navigation-span_descendent',
+        a_descendent: 'navigation-a_descendent'
+    },
     list: ['h2', 'hr'], // Specify the element criteria that the LI element must contain to generate the list.
     descendent: ['h2', 'h3', 'h4', 'h5', 'h6'], // Specifies the array of element node names to be imported as additional child elements
     hasDescendent: true // Please specify whether or not to have children in "List Heading".
