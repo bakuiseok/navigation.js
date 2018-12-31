@@ -6,9 +6,9 @@ function navigation(option) {
         for (let c of ol.children) { // target LI
             if (!c.id && c.nodeName == 'LI') {
                 let whe = [];
-                console.log(c);
+                //console.log(c);
                 for (let d of c.children) {
-                    console.log(d);
+                    //  console.log(d);
                     for (let i = 0; i < option.list.length; i++) {
                         if (d.nodeName.toLowerCase() == option.list[i]) {
                             whe.push(d.nodeName.toLowerCase());
@@ -50,16 +50,23 @@ function navigation(option) {
                 a.innerText = li.children[0].textContent;
 
                 for (let s of option.descendent) {
+                    let i = 0;
                     for (let e of li.children) {
-                        if (e.nodeName == s.toUpperCase()) {
-                            e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
+                        if (i < option.list.length
+                            && e.nodeName == option.list[i].toUpperCase()) {
+                            continue;
+                        } else {
+                            if (e.nodeName == s.toUpperCase()) {
+                                e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
 
-                            const span = intoLi.appendChild(document.createElement('SPAN'));
-                            span.style.margin = '0.2rem';
-                            const a = span.appendChild(document.createElement('A'))
-                            a.setAttribute('href', '#' + e.id);
-                            a.innerText = '#' + e.textContent;
+                                const span = intoLi.appendChild(document.createElement('SPAN'));
+                                span.style.margin = '0.2rem';
+                                const a = span.appendChild(document.createElement('A'))
+                                a.setAttribute('href', '#' + e.id);
+                                a.innerText = '#' + e.textContent;
+                            }
                         }
+                        i++;
                     }
                 }
             }
