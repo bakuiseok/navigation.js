@@ -13,7 +13,7 @@ https://suk9206.github.io/navigation.js/
 navigation({
     from: document.getElementById('main'), // Elements that you want to navigation.
     into: document.getElementById('nav'), // The location of the element from which you want to import the navigation data.
-    class: {
+    class: { // Set class name of element.
         ol: 'navigation-ol',
         li: 'navigation-li',
         div_listHeading: 'navigation-div_listHeading',
