@@ -53,11 +53,11 @@ function navigation(option) {
                     for (let e of li.children) {
                         if (e.nodeName == s.toUpperCase()) {
                             e.setAttribute('id', option.from.nodeName + e.nodeName + Math.random());
-                            const a_ = intoLi.appendChild(document.createElement('A'));
-                            a_.setAttribute('href', '#' + e.id);
-                            const btn = a_.appendChild(document.createElement('BUTTON'))
-                            btn.setAttribute('type', 'button');
-                            btn.innerText = '#' + e.textContent;
+                            const span = intoLi.appendChild(document.createElement('SPAN'));
+                            span.style.margin = '0.2rem';
+                            const a = span.appendChild(document.createElement('A'))
+                            a.setAttribute('href', '#' + e.id);
+                            a.innerText = '#' + e.textContent;
                         }
                     }
                 }
