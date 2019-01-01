@@ -6,7 +6,7 @@
 2. Provides rules for authors to organize their content systematically.
 
 ## Example
-https://suk9206.github.io/navigation.js/
+http://suk9206.tistory.com/911
 
 ## Usage
 ```
