@@ -10,6 +10,11 @@
 ## Example
 http://suk9206.tistory.com/911
 
+## CDN
+```
+<script src="https://cdn.jsdelivr.net/gh/suk9206/navigation.js/navigation.js"></script>
+```
+
 ## Usage
 ```
 navigation({
