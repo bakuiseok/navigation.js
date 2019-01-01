@@ -1,6 +1,5 @@
 ![GitHub Logo](./logo.png)
 
-
 **"suk9206/navigation.js"** is copies the skip break that matches the form set in **"suk9206/navigation.js"** from the specified element to the desired element.
 
 ## Purpose to develop
@@ -8,7 +7,7 @@
 2. Provides rules for authors to organize their content systematically.
 
 ## Example
-http://suk9206.tistory.com/911
+[한국어](https://suk9206.tistory.com/912), [English](https://suk9206.tistory.com/911)
 
 ## CDN
 ```
