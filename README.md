@@ -32,7 +32,17 @@ navigation({
     hasDescendent: true // Please specify whether or not to have children in "List Heading".
 });
 ```
+
 ## 👨‍💻 Note for contribute
+Please participate in this project to improve the quality of existing documents.
+Anyone can participate.
+
+The CSS design of the summary table, extension, algorithm improvement, and even logo creation all need your help.
+
+I do not have much to say about features that are so good yet, but I want to work with you on purpose and meaning and to build on the project implementation. Every one of your skills is needed.
+
+This project is subject to MIT license. In addition, this project is a joint project in which no absolute owner exists.
+
 Anyone can participate in this project without regulation. **We hope you will contribute this project for simplicity and rapid development rather than fragmentation of the project.** It helps us focus our opinions effectively and systematically. **You can do anything on this project without restriction!**
 
 ### ♻️ Contributors who contribute a lot to this project must own this project. This allows the project to circulate more fluid, responsive and fast.
